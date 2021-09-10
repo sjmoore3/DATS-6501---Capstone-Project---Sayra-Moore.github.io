@@ -4,6 +4,7 @@ Welcome to my github site, where you will find my commented code for my capstone
 
 # Code
 
+### Reading in data set
 ```markdown
 cyber <- read.csv(file = "C:/Users/ipcon/OneDrive - The George Washington University/Summer 2021/DATS 6501/DATS 6501 - Capstone Project - Sayra Moore/Cybercrime_Dataset Clean_CSV.csv")
 str(cyber)
@@ -134,12 +135,35 @@ cyberkmeans<- cyber[,c("Victim", "CC_Fraud", "Other_ID_Theft")]
 fit <- kmeans(cyberkmeans, 3)
 aggregate(cyberkmeans,by=list(fit$cluster),FUN=mean)
 cyberkmeans <- data.frame(cyberkmeans, fit$cluster)
+
+install.packages("mclust")
+library(mclust)
+fit <- Mclust(cyberkmeans)
+plot(fit)
+summary(fit)
+#Figure9-12
+```
+
+### K-Means Clustering with 3 clusters
+```
+fit <- kmeans(cyberkmeans, 3)
+```
+
+### Cluster Plot against 1st 2 principal components vary parameters for most readable graph
+```
+library(cluster) 
+clusplot(cyberkmeans, fit$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
+#Figure13
+```
+
+### Centroid Plot against 1st 2 discriminant functions
+```
+install.packages("fpc")
+library(fpc)
+plotcluster(cyberkmeans, fit$cluster)
+#Figure14
 ```
 
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
