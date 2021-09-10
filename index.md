@@ -2,7 +2,7 @@
 
 Welcome to my github site, where you will find my commented code for my capstone project! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration
 
-### Code
+## Code
 
 ```markdown
 cyber <- read.csv(file = "C:/Users/ipcon/OneDrive - The George Washington University/Summer 2021/DATS 6501/DATS 6501 - Capstone Project - Sayra Moore/Cybercrime_Dataset Clean_CSV.csv")
@@ -26,16 +26,16 @@ summary(cyber)
 
 [Link](url) and ![Image](src)
 
-## Correlation
-``` Correlation
+### Correlation
+``` 
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
 #Figure1
 ```
-``` Correlation
-cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
-plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
-#Figure1
+``` 
+cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
+plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo)
+#Figure2
 ```
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
