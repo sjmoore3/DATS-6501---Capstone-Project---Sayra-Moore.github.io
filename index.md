@@ -29,7 +29,7 @@ summary(cyber)
 ``` Correlation
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
-#Figure1
+![Figure 1](![Figure1](https://user-images.githubusercontent.com/54607172/132926166-e789d060-4085-4366-8ec6-e049d2869333.png)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
