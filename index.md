@@ -18,12 +18,14 @@ cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
 #Figure1
 ```
-[Image](Visualizations/R Outputs/Figure1.png)
+![Image](Visualizations/R Outputs/Figure1.png)
 ``` 
 cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
 plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo)
 #Figure2
 ```
+![Image](Visualizations/R Outputs/Figure2.png)
+
 ## Data Cleansing
 ### Cleaning the "CC_Fraud" variable:
 ```
@@ -93,6 +95,8 @@ str(cyberint)
 round(cor(cyberint),4)
 #Figure3
 ```
+![Image](Visualizations/R Outputs/Figure3.png)
+
 ## Modeling
 ### Model with all continuous independent variables
 ```
@@ -101,6 +105,10 @@ summary(glmcyber_fit1)
 plot(glmcyber_fit1)
 #Figure4.1-4.4
 ```
+![Image](Visualizations/R Outputs/Figure4.1.png)
+![Image](Visualizations/R Outputs/Figure4.2.png)
+![Image](Visualizations/R Outputs/Figure4.3.png)
+![Image](Visualizations/R Outputs/Figure4.4.png)
 
 ### Model with independent variables with the assumed biggest impact
 ```
