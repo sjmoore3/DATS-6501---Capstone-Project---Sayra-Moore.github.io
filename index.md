@@ -72,7 +72,69 @@ cyber$Malware.Present <- gsub("No",0,cyber$Malware.Present)
 cyber$Malware.Present <- gsub("Yes",1,cyber$Malware.Present)
 cyber$Malware.Present <- as.integer(cyber$Malware.Present)
 ```
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Carrying forward the last observations for NAs
+```
+install.packages("xts", repos="http://cloud.r-project.org")
+library(xts)
+cyber <- na.locf(cyber)
+
+str(cyber)
+```
+
+### Exporting a cleaned version to use for the visualizations in Tableau
+```
+write.csv(cyber,"C:/Users/ipcon/OneDrive - The George Washington University/Summer 2021/DATS 6501/Cyber_Cleaned.csv", row.names = FALSE)
+```
+
+### Creating a dataframe with integer variables only, in order to create correlation matrix
+```
+install.packages("tidyverse")
+library(dplyr)
+cyberint <- select_if(cyber,is.integer)
+str(cyberint)
+round(cor(cyberint),4)
+#Figure3
+```
+## Modeling
+### Model with all continuous independent variables
+```
+glmcyber_fit1 <- glm(Victim~Age+No_of_CC+Tot_Kids+Sess_Cnt_1mos, data=cyber)
+summary(glmcyber_fit1)
+plot(glmcyber_fit1)
+#Figure4.1-4.4
+```
+
+### Model with independent variables with the assumed biggest impact
+```
+glmcyber_fit2 <- glm(Victim~Age+Computer+Cell_Phone+No_of_CC+Sess_Cnt_1mos, data=cyber)
+summary(glmcyber_fit2)
+plot(glmcyber_fit2)
+#Figure5.1-5.4
+
+with(cyber,plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,
+                xlab="# of Sessions Per Month",
+                ylab="# of Cyber Attacks Per Month",
+                main="Sessions vs. Cyber Attacks"))
+with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==1],cyber$No_Cyber_Atks_1mo[cyber$Victim==1],pch=16,col="red"))
+with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==0],cyber$No_Cyber_Atks_1mo[cyber$Victim==0],pch=17,col="green"))
+#Figure6
+```
+
+### Logistic Regression
+```
+glmcyber_fit1 <- glm(formula=Victim~CC_Fraud+Other_ID_Theft+Computer+Tablet+Cell_Phone+Social_Net+OL_Bank+Firewall+Malware.Present+Frequent.Traveler+Security_Clearance+Kids_in_HH+Secure_Hnet+Cyber_Atks,data=cyber,family=binomial,maxit=50)
+summary(glmcyber_fit1)
+#Figure7
+```
+
+### Clustering with K-Means
+```
+cyberkmeans<- cyber[,c("Victim", "CC_Fraud", "Other_ID_Theft")]
+
+fit <- kmeans(cyberkmeans, 3)
+aggregate(cyberkmeans,by=list(fit$cluster),FUN=mean)
+cyberkmeans <- data.frame(cyberkmeans, fit$cluster)
+```
 
 ### Jekyll Themes
 
