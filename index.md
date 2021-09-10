@@ -116,7 +116,13 @@ glmcyber_fit2 <- glm(Victim~Age+Computer+Cell_Phone+No_of_CC+Sess_Cnt_1mos, data
 summary(glmcyber_fit2)
 plot(glmcyber_fit2)
 #Figure5.1-5.4
+```
+![Image](Visualizations/R Outputs/Figure5.1.png)
+![Image](Visualizations/R Outputs/Figure5.2.png)
+![Image](Visualizations/R Outputs/Figure5.3.png)
+![Image](Visualizations/R Outputs/Figure5.4.png)
 
+```
 with(cyber,plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,
                 xlab="# of Sessions Per Month",
                 ylab="# of Cyber Attacks Per Month",
@@ -125,6 +131,7 @@ with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==1],cyber$No_Cyber_Atks_1mo[c
 with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==0],cyber$No_Cyber_Atks_1mo[cyber$Victim==0],pch=17,col="green"))
 #Figure6
 ```
+![Image](Visualizations/R Outputs/Figure6.png)
 
 ### Logistic Regression
 ```
@@ -132,6 +139,7 @@ glmcyber_fit1 <- glm(formula=Victim~CC_Fraud+Other_ID_Theft+Computer+Tablet+Cell
 summary(glmcyber_fit1)
 #Figure7
 ```
+![Image](Visualizations/R Outputs/Figure7.png)
 
 ### Clustering with K-Means
 ```
@@ -148,6 +156,10 @@ plot(fit)
 summary(fit)
 #Figure9-12
 ```
+![Image](Visualizations/R Outputs/Figure9.png)
+![Image](Visualizations/R Outputs/Figure10.png)
+![Image](Visualizations/R Outputs/Figure11.png)
+![Image](Visualizations/R Outputs/Figure12.png)
 
 ### K-Means Clustering with 3 clusters
 ```
@@ -160,6 +172,7 @@ library(cluster)
 clusplot(cyberkmeans, fit$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 #Figure13
 ```
+![Image](Visualizations/R Outputs/Figure13.png)
 
 ### Centroid Plot against 1st 2 discriminant functions
 ```
@@ -168,3 +181,4 @@ library(fpc)
 plotcluster(cyberkmeans, fit$cluster)
 #Figure14
 ```
+![Image](Visualizations/R Outputs/Figure14.png)
