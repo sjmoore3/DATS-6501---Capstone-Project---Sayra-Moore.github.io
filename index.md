@@ -5,11 +5,11 @@ Welcome to my github site, where you will find my commented code for my capstone
 ### Code
 
 ```markdown
-
 cyber <- read.csv(file = "C:/Users/ipcon/OneDrive - The George Washington University/Summer 2021/DATS 6501/DATS 6501 - Capstone Project - Sayra Moore/Cybercrime_Dataset Clean_CSV.csv")
 str(cyber)
 
 summary(cyber)
+```
 
 
 # Header 1
@@ -25,7 +25,7 @@ summary(cyber)
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
-```
+
 ``` Correlation
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
