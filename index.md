@@ -5,7 +5,12 @@ Welcome to my github site, where you will find my commented code for my capstone
 ### Code
 
 ```markdown
-Syntax highlighted code block
+
+cyber <- read.csv(file = "C:/Users/ipcon/OneDrive - The George Washington University/Summer 2021/DATS 6501/DATS 6501 - Capstone Project - Sayra Moore/Cybercrime_Dataset Clean_CSV.csv")
+str(cyber)
+
+summary(cyber)
+
 
 # Header 1
 ## Header 2
@@ -20,6 +25,11 @@ Syntax highlighted code block
 **Bold** and _Italic_ and `Code` text
 
 [Link](url) and ![Image](src)
+```
+``` Correlation
+cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
+plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
+#Figure1
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
