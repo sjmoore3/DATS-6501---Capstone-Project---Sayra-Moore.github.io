@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## DATS 6501 - Capstone Project - Sayra Moore
 
 You can use the [editor on GitHub](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
