@@ -1,12 +1,8 @@
 ## DATS 6501 - Capstone Project - Sayra Moore
 
-You can use the [editor on GitHub](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to my github site, where you will find my commented code for my capstone project! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Code
 
 ```markdown
 Syntax highlighted code block
