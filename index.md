@@ -14,13 +14,12 @@ summary(cyber)
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
 
 ## Correlation
 ``` 
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
-#Figure1
+`#Figure1`
 ```
 ``` 
 cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
@@ -162,8 +161,5 @@ install.packages("fpc")
 library(fpc)
 plotcluster(cyberkmeans, fit$cluster)
 #Figure14
+![Image](src)
 ```
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
