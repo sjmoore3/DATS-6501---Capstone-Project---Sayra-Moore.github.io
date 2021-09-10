@@ -26,7 +26,7 @@ summary(cyber)
 
 [Link](url) and ![Image](src)
 
-##Correlation
+## Correlation
 ``` Correlation
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
