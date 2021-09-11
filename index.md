@@ -1,6 +1,6 @@
 # DATS 6501 - Capstone Project - Sayra Moore
 
-Welcome to my github site, where you will find my commented code for my [capstone project](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/DATS%206501%20-%20Capstone%20Project%20-%20Sayra%20Moore.docx)"click here for paper"! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration
+Welcome to my github site, where you will find my commented [code](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/DATS%206501%20-%20Capstone%20Project%20-%20Sayra%20Moore.R) for my [capstone project](https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/DATS%206501%20-%20Capstone%20Project%20-%20Sayra%20Moore.docx)! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration different habits and behaviors such as number of credit cards, if the individual had fallen victim to cybercrim in the past, how many social network accounts a person has, if they had firewalls and secure networks, and more.
 
 # Code
 
