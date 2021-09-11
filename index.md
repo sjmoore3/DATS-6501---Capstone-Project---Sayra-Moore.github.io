@@ -16,15 +16,14 @@ summary(cyber)
 ``` 
 cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
-#Figure1
 ```
 Figure 1
 ![Image](Visualizations/R Outputs/Figure1.png)
 ``` 
 cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
 plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo)
-#Figure2
 ```
+Figure 2
 ![Image](Visualizations/R Outputs/Figure2.png)
 
 ## Data Cleansing
@@ -94,8 +93,8 @@ library(dplyr)
 cyberint <- select_if(cyber,is.integer)
 str(cyberint)
 round(cor(cyberint),4)
-#Figure3
 ```
+Figure 3
 ![Image](Visualizations/R Outputs/Figure3.png)
 
 ## Modeling
@@ -104,11 +103,14 @@ round(cor(cyberint),4)
 glmcyber_fit1 <- glm(Victim~Age+No_of_CC+Tot_Kids+Sess_Cnt_1mos, data=cyber)
 summary(glmcyber_fit1)
 plot(glmcyber_fit1)
-#Figure4.1-4.4
 ```
+Figure 4.1
 ![Image](Visualizations/R Outputs/Figure4.1.png)
+Figure 4.2
 ![Image](Visualizations/R Outputs/Figure4.2.png)
+Figure 4.3
 ![Image](Visualizations/R Outputs/Figure4.3.png)
+Figure 4.4
 ![Image](Visualizations/R Outputs/Figure4.4.png)
 
 ### Model with independent variables with the assumed biggest impact
@@ -116,11 +118,14 @@ plot(glmcyber_fit1)
 glmcyber_fit2 <- glm(Victim~Age+Computer+Cell_Phone+No_of_CC+Sess_Cnt_1mos, data=cyber)
 summary(glmcyber_fit2)
 plot(glmcyber_fit2)
-#Figure5.1-5.4
 ```
+Figure 5.1
 ![Image](Visualizations/R Outputs/Figure5.1.png)
+Figure 5.2
 ![Image](Visualizations/R Outputs/Figure5.2.png)
+Figure 5.3
 ![Image](Visualizations/R Outputs/Figure5.3.png)
+Figure 5.4
 ![Image](Visualizations/R Outputs/Figure5.4.png)
 
 ```
@@ -130,16 +135,16 @@ with(cyber,plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,
                 main="Sessions vs. Cyber Attacks"))
 with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==1],cyber$No_Cyber_Atks_1mo[cyber$Victim==1],pch=16,col="red"))
 with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==0],cyber$No_Cyber_Atks_1mo[cyber$Victim==0],pch=17,col="green"))
-#Figure6
 ```
+Figure 6
 ![Image](Visualizations/R Outputs/Figure6.png)
 
 ### Logistic Regression
 ```
 glmcyber_fit1 <- glm(formula=Victim~CC_Fraud+Other_ID_Theft+Computer+Tablet+Cell_Phone+Social_Net+OL_Bank+Firewall+Malware.Present+Frequent.Traveler+Security_Clearance+Kids_in_HH+Secure_Hnet+Cyber_Atks,data=cyber,family=binomial,maxit=50)
 summary(glmcyber_fit1)
-#Figure7
 ```
+Figure 7
 ![Image](Visualizations/R Outputs/Figure7.png)
 
 ### Clustering with K-Means
@@ -155,11 +160,14 @@ library(mclust)
 fit <- Mclust(cyberkmeans)
 plot(fit)
 summary(fit)
-#Figure9-12
 ```
+Figure 9
 ![Image](Visualizations/R Outputs/Figure9.png)
+Figure 10
 ![Image](Visualizations/R Outputs/Figure10.png)
+Figure 11
 ![Image](Visualizations/R Outputs/Figure11.png)
+Figure 12
 ![Image](Visualizations/R Outputs/Figure12.png)
 
 ### K-Means Clustering with 3 clusters
@@ -171,8 +179,8 @@ fit <- kmeans(cyberkmeans, 3)
 ```
 library(cluster) 
 clusplot(cyberkmeans, fit$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
-#Figure13
 ```
+Figure 13
 ![Image](Visualizations/R Outputs/Figure13.png)
 
 ### Centroid Plot against 1st 2 discriminant functions
@@ -180,6 +188,6 @@ clusplot(cyberkmeans, fit$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 install.packages("fpc")
 library(fpc)
 plotcluster(cyberkmeans, fit$cluster)
-#Figure14
 ```
+Figure 14
 ![Image](Visualizations/R Outputs/Figure14.png)
