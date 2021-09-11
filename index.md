@@ -18,14 +18,13 @@ cor.test(cyber$Age,cyber$No_Cyber_Atks_1mo,method = "pearson")
 plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
 ```
 Figure 1
-<img src="Visualizations/R Outputs/Figure1.png">
 <img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure1.png">
 ``` 
 cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
 plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo)
 ```
 Figure 2
-![Image](Visualizations/R Outputs/Figure2.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure2.png">
 
 ## Data Cleansing
 ### Cleaning the "CC_Fraud" variable:
@@ -96,7 +95,7 @@ str(cyberint)
 round(cor(cyberint),4)
 ```
 Figure 3
-![Image](Visualizations/R Outputs/Figure3.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure3.png">
 
 ## Modeling
 ### Model with all continuous independent variables
@@ -106,13 +105,13 @@ summary(glmcyber_fit1)
 plot(glmcyber_fit1)
 ```
 Figure 4.1
-![Image](Visualizations/R Outputs/Figure4.1.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure4.1.png">
 Figure 4.2
-![Image](Visualizations/R Outputs/Figure4.2.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure4.2.png">
 Figure 4.3
-![Image](Visualizations/R Outputs/Figure4.3.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure4.3.png">
 Figure 4.4
-![Image](Visualizations/R Outputs/Figure4.4.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure4.4.png">
 
 ### Model with independent variables with the assumed biggest impact
 ```
@@ -121,13 +120,13 @@ summary(glmcyber_fit2)
 plot(glmcyber_fit2)
 ```
 Figure 5.1
-![Image](Visualizations/R Outputs/Figure5.1.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure5.1.png">
 Figure 5.2
-![Image](Visualizations/R Outputs/Figure5.2.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure5.1.png">
 Figure 5.3
-![Image](Visualizations/R Outputs/Figure5.3.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure5.1.png">
 Figure 5.4
-![Image](Visualizations/R Outputs/Figure5.4.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure5.1.png">
 
 ```
 with(cyber,plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,
@@ -138,7 +137,7 @@ with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==1],cyber$No_Cyber_Atks_1mo[c
 with(cyber,points(cyber$Sess_Cnt_1mos[cyber$Victim==0],cyber$No_Cyber_Atks_1mo[cyber$Victim==0],pch=17,col="green"))
 ```
 Figure 6
-![Image](Visualizations/R Outputs/Figure6.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure6.png">
 
 ### Logistic Regression
 ```
@@ -146,7 +145,7 @@ glmcyber_fit1 <- glm(formula=Victim~CC_Fraud+Other_ID_Theft+Computer+Tablet+Cell
 summary(glmcyber_fit1)
 ```
 Figure 7
-![Image](Visualizations/R Outputs/Figure7.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure7.png">
 
 ### Clustering with K-Means
 ```
@@ -163,13 +162,13 @@ plot(fit)
 summary(fit)
 ```
 Figure 9
-![Image](Visualizations/R Outputs/Figure9.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure9.png">
 Figure 10
-![Image](Visualizations/R Outputs/Figure10.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure10.png">
 Figure 11
-![Image](Visualizations/R Outputs/Figure11.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure11.png">
 Figure 12
-![Image](Visualizations/R Outputs/Figure12.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure12.png">
 
 ### K-Means Clustering with 3 clusters
 ```
@@ -182,7 +181,7 @@ library(cluster)
 clusplot(cyberkmeans, fit$cluster, color=TRUE, shade=TRUE, labels=2, lines=0)
 ```
 Figure 13
-![Image](Visualizations/R Outputs/Figure13.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure13.png">
 
 ### Centroid Plot against 1st 2 discriminant functions
 ```
@@ -191,4 +190,4 @@ library(fpc)
 plotcluster(cyberkmeans, fit$cluster)
 ```
 Figure 14
-![Image](Visualizations/R Outputs/Figure14.png)
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure14.png">
