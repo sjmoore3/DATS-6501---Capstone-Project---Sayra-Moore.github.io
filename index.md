@@ -1,6 +1,6 @@
 # DATS 6501 - Capstone Project - Sayra Moore
 
-Welcome to my github site, where you will find my commented code for my capstone project! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration
+Welcome to my github site, where you will find my commented code for my [capstone project] (DATS 6501 - Capstone Project - Sayra Moore.docx)! The purpose of this project was to focus on determining if a person would fall victim to a cybercrime when taking into consideration
 
 # Code
 
