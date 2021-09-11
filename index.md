@@ -19,6 +19,7 @@ plot(cyber$Age,cyber$No_Cyber_Atks_1mo)
 ```
 Figure 1
 <img src="Visualizations/R Outputs/Figure1.png">
+<img src="https://github.com/sjmoore3/DATS-6501---Capstone-Project---Sayra-Moore.github.io/blob/main/Visualizations/R%20Outputs/Figure1.png">
 ``` 
 cor.test(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo,method="pearson")
 plot(cyber$Sess_Cnt_1mos,cyber$No_Cyber_Atks_1mo)
